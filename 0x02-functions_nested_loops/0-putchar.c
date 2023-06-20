@@ -1,6 +1,8 @@
 #include<stdio.h>
-int main(void) 
-{
+/*
+ * The main function is void
+ */
+int main(void){
 	printf("_putchar\n");
 	return (0);
 }
