@@ -5,12 +5,8 @@
  *
  * Return: Always 0.
  */
-#include <stdio.h>
-
-void print_numbers(void) {
-    int i;
-    for (i = 0; i <= 9; i++) {
-        putchar(i + '0');
-    }
-    putchar('\n');
+int main(void)
+{
+    print_numbers();
+    return (0);
 }
