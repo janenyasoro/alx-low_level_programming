@@ -6,16 +6,42 @@
   *
   * Return: the pointer to dest
   */
-char *_strcpy(char *dest, char *src)
-{
-	int i;
+int _atoi(char *s) {
+    int sign = 1;
+    int result = 0;
 
-	for (i = 0; src[i] != '\0'; i++)
+       if (*s == '-') {
+        sign = -1;
+        s++;
+    } else if (*s == '+') {
+        s++;
+    }
+
+        while (*s != '\0') {
+        if (*s >= '0' && *s <= '9') {
+            result = result * 10 + (*s - '0');
+            s++;
+        } else 
 	{
-		dest[i] = src[i];
-	}
+            break;
+        }
+    }
 
-	dest[i++] = '\0';
+    return sign * result;
+}
 
-	return (dest);
+int main() {
+    char str1[] = "123";
+    char str2[] = "-456";
+    char str3[] = "abc";
+    char str4[] = "+789";
+
+    int num1 = _atoi(str1);
+    int num2 = _atoi(str2);
+    int num3 = _atoi(str3);
+    int num4 = _atoi(str4);
+
+    printf("Converted numbers: %d, %d, %d, %d\n", num1, num2, num3, num4);
+
+    return 0;
 }
