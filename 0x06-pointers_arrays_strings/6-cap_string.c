@@ -34,5 +34,4 @@ char *cap_string(char *s)
 	}
 	return (s);
 }
- 36 changes: 36 additions & 0 deletions36  
-7-leet.c
+ 
