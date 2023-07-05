@@ -4,17 +4,15 @@
  * @s: the string to calculate the length of the string
  * Return: the length of the string
  */
+#include <stdio.h>
+
 void _print_rev_recursion(char *s)
 {
-	int len = 0;
-
-	if (*s)
-	{
-		_print_rev_recursion(s+1);
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
-		len ++;
-		len++;
-	}
-	_putchar(len);
+    if (*s == '\0') {
+        return;  
+ }
+  
+    _print_rev_recursion(s + 1);  
+   _putchar(*s);  
 }
+
