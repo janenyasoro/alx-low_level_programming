@@ -6,17 +6,23 @@
  *@src: String to be concatenated upon
  * Return: returns poiner to @dest
  */
-char *_strcat(char *dest, char *src}
-	{
-	int a, b;
+char *_strcat(char *dest, char *src)
+{
+	int len = 0;
+	char *ptr = dest;
 
-	for (a = 0; dest[a] != '\0'; a++)
+	while (*dest != '\0')
 	{
+	len++;
+	dest++;
 	}
-	for (b = 0; src[b] != '\0'; b++)
+
+	while (*src != '\0')
 	{
-	dest[a] = src[b];
-	a++;
+	*dest = *src;
+	dest++;
+	src++;
 	}
-	return (dest);
+	*dest = '\0';
+	return (ptr);
 }

@@ -4,19 +4,12 @@
  *@i: number targeted
  *Return: returns 0
  */
-int _abs(int i)
+int _abs(int r)
 {
-	if (a > 0)
+	if (r < 0)
 	{
-		return (a);
+		r = r * -1;
+		return (r);
 	}
-	else if (a < 0)
-	{
-		a = a * -1;
-		return (a);
-	}
-	else
-	{
-		return (a);
-	}
+	return (r);
 }
