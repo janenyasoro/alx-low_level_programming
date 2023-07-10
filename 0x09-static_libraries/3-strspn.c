@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  *_strspn - search the number of bytes in the initial
