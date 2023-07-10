@@ -6,10 +6,17 @@
  */
 int _abs(int i)
 {
-if (i > 0)
-return (i);
-else if (i < 0)
-return (-i);
-else
-return (0);
+	if (a > 0)
+	{
+		return (a);
+	}
+	else if (a < 0)
+	{
+		a = a * -1;
+		return (a);
+	}
+	else
+	{
+		return (a);
+	}
 }

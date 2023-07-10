@@ -10,15 +10,17 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-int i;
-while (*s)
-{
-for (i = 0; accept[i]; i++)
-{
-if (accept[i] == *s)
-return (s);
-}
-s++;
-}
-return ('\0');
+	unsigned int a, b;
+
+	for (a = 0; s[a] != '\0'; a++)
+	{
+		for (b = 0; accept[b] != '\0'; b++)
+		{
+			if (accept[b] == s[a])
+			{
+				return (&s[a]);
+			}
+		}
+	}
+	return (NULL);
 }
