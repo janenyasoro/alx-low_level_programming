@@ -1,3 +1,4 @@
+#!/bin/bash
 #include "main.h"
 /**
  * _abs - prints the absolute value of a number
